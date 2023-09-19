@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Log Analysis Tool</title>
+</head>
+<body>
+    <h1>Log Analysis Tool</h1>
+
+    <!-- Log Upload Form -->
+    <form method="POST" action="/upload_logs" enctype="multipart/form-data">
+        <label for="log_file">Upload Log File:</label>
+        <input type="file" name="log_file" id="log_file" accept=".txt, .log, .xml, .json">
+        <button type="submit">Upload Log File</button>
+    </form>
+
+    <!-- Display Loaded Logs (sample data) -->
+    <h2>Loaded Logs</h2>
+    <table>
+        <tr>
+            <th>Timestamp</th>
+            <th>Level</th>
+            <th>Message</th>
+            <th>Error Code</th>
+        </tr>
+        {% for log in logs %}
+            <tr>
+                <td>{{ log.timestamp }}</td>
+                <td>{{ log.level }}</td>
+                <td>{{ log.message }}</td>
+                <td>{{ log.error_code }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+    <!-- Flash Messages (for displaying upload status) -->
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul class="flash">
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+</body>
+</html>
