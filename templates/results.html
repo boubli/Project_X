@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Log Analysis Results</title>
+</head>
+<body>
+    <h1>Log Analysis Results</h1>
+    <a href="/">Back to Search</a>
+    <br><br>
+    
+    <!-- Display the filtered log results here -->
+    <ul>
+        {% for result in results %}
+            <li>{{ result }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
