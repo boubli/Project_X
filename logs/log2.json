@@ -1,0 +1,9 @@
+{
+  "Timestamp": "2023-09-28T15:30:00Z",
+  "LogLevel": "ERROR",
+  "Message": "An error occurred while processing the request.",
+  "ErrorCode": 500,
+  "Application": "SampleApp",
+  "Module": "Authentication",
+  "FunctionName": "authenticateUser"
+}

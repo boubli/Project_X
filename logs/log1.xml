@@ -1,0 +1,9 @@
+<LogEntry>
+  <Timestamp>2023-09-28T15:30:00Z</Timestamp>
+  <LogLevel>ERROR</LogLevel>
+  <Message>An error occurred while processing the request.</Message>
+  <ErrorCode>500</ErrorCode>
+  <Application>SampleApp</Application>
+  <Module>Authentication</Module>
+  <FunctionName>authenticateUser</FunctionName>
+</LogEntry>
