@@ -1,0 +1,32 @@
+[
+    {
+        "timestamp": "2023-09-30T12:45:00",
+        "logLevel": "INFO",
+        "message": "This is an information message.",
+        "errorCode": null
+    },
+    {
+        "timestamp": "2023-09-30T13:00:00",
+        "logLevel": "ERROR",
+        "message": "This is an error message.",
+        "errorCode": "500"
+    },
+    {
+        "timestamp": "2023-09-30T13:15:00",
+        "logLevel": "INFO",
+        "message": "Another informational message.",
+        "errorCode": null
+    },
+    {
+        "timestamp": "2023-09-30T13:30:00",
+        "logLevel": "ERROR",
+        "message": "Another error message.",
+        "errorCode": "501"
+    },
+    {
+        "timestamp": "2023-09-30T13:45:00",
+        "logLevel": "WARNING",
+        "message": "A warning message.",
+        "errorCode": "502"
+    }
+]

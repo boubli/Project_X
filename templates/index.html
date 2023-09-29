@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
     <title>Log Analysis Tool</title>
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Roboto Condensed', sans-serif;
             background-color: #f8f8f8;
             display: flex;
             justify-content: center;
@@ -21,6 +24,7 @@
             max-width: 400px;
             width: 90%;
             text-align: center;
+            font-family: 'Roboto Condensed', sans-serif;
         }
 
         h1 {
@@ -82,9 +86,9 @@
             <input type="date" id="end_date" name="end_date" required>
             <label for="keyword">Select Keyword:</label>
             <select id="keyword" name="keyword" required>
-                <option value="info">INFO</option>
-                <option value="error">WARNING</option>
-                <option value="warning">ERROR</option>
+                <option value="INFO">INFO</option>
+                <option value="WARNING">WARNING</option>
+                <option value="ERROR">ERROR</option>
             </select>
             <button type="submit">Search</button>
         </form>

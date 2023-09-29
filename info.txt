@@ -7,3 +7,5 @@ downoad flask
    pip install gunicorn
    and run it using : gunicorn app:app
 
+   install in cmd : pip install flask-paginate
+

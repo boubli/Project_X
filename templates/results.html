@@ -30,6 +30,9 @@
             padding: 0;
             margin: 20px;
         }
+        ul:hoover{
+            color: red;
+        }
 
         li {
             background-color: #fff;
@@ -44,6 +47,12 @@
             font-weight: bold;
             margin-bottom: 10px;
         }
+
+        .download-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
@@ -57,7 +66,13 @@
         {% for result in results %}
             <li>{{ result }}</li>
         {% endfor %}
-    </ul> <br >
+    </ul>
+
+    <!-- Add a download link to download the filtered results -->
+    <a href="{{ url_for('download_results', filtered_results=results) }}" class="download-link" download>Download Filtered Results</a>
+
+    <br>
+
     <a href="/">Back to Search</a>
 </body>
 </html>
