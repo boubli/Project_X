@@ -3,18 +3,61 @@
 <head>
     <title>Log Analysis Results</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
 
+        h1 {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        a {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            font-weight: bold;
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px;
+        }
+
+        li {
+            background-color: #fff;
+            padding: 10px;
+            margin: 10px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        .result-count {
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 <body>
     <h1>Log Analysis Results</h1>
-    <a href="/">Back to Search</a>
-    <br><br>
+    
+    <!-- Display the total result count -->
+    <p class="result-count">{{ results|length }} Results Found</p>
     
     <!-- Display the filtered log results here -->
     <ul>
         {% for result in results %}
             <li>{{ result }}</li>
         {% endfor %}
-    </ul>
+    </ul> <br >
+    <a href="/">Back to Search</a>
 </body>
 </html>
