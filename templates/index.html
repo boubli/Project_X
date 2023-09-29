@@ -75,9 +75,9 @@
         <h1>Log Analysis Tool</h1>
         <form method="post" action="/search" enctype="multipart/form-data">
             <label for="log_file">Upload Log File:</label>
-            <input type="file" id="log_file" name="log_file" accept=".log, .json, .xml" required>
+            <input type="file" id="log_file" name="log_file" accept=".log, .json, .xml, .txt" required>
             <label for="start_date">Start Date:</label>
-            <input type="date" id="start_date" name="start_date" required>
+            <input type="date" id="start_date" name="start_date">
             <label for="end_date">End Date:</label>
             <input type="date" id="end_date" name="end_date" required>
             <label for="keyword">Select Keyword:</label>
@@ -85,6 +85,7 @@
                 <option value="info">Info</option>
                 <option value="error">Error</option>
                 <option value="warning">Warning</option>
+                <option value="nah">nah</option>
             </select>
             <button type="submit">Search</button>
         </form>

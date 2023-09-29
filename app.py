@@ -3,6 +3,9 @@ import os
 
 app = Flask(__name__)
 
+# Define global variables
+filtered_results = []
+
 # Define routes and functions
 @app.route('/')
 def index():
@@ -10,6 +13,9 @@ def index():
 
 @app.route('/search', methods=['POST'])
 def search():
+    global filtered_results  # Use the global filtered_results list
+    filtered_results = []  # Clear the previous results
+
     # Retrieve search parameters from the form
     start_date = request.form.get('start_date')
     end_date = request.form.get('end_date')
@@ -25,9 +31,6 @@ def search():
         uploaded_file.save(log_file_path)
     else:
         return "No log file uploaded."
-
-    # Initialize a list to store filtered log entries
-    filtered_results = []
 
     try:
         # Open and read the log file
@@ -50,7 +53,15 @@ def search():
     except FileNotFoundError:
         return "Log file not found."
 
-    return render_template('results.html', results=filtered_results)
+    return render_template('results.html', results=filtered_results[:10], total_results=len(filtered_results))
+
+@app.route('/result/<int:index>')
+def result(index):
+    if index < 0 or index >= len(filtered_results):
+        return "Invalid result index"
+    
+    result = filtered_results[index]
+    return render_template('result_detail.html', result=result)
 
 if __name__ == '__main__':
     app.run(debug=True)
