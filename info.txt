@@ -1,0 +1,9 @@
+downoad flask 
+
+
+1- cmd === cd drag the file to cmd 
+2- ls to show folder contect 
+3- python app.py or fllow this steps if is not work 
+   pip install gunicorn
+   and run it using : gunicorn app:app
+
